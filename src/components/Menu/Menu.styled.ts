@@ -16,11 +16,3 @@ export const Navigation = styled(Display)`
     padding: 5px;
     width: 95%;
 `;
-
-export const Section = styled.section`
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: lightgray;
-    padding: 0.5% 1% ;
-`
