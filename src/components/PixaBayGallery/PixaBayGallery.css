@@ -1,4 +1,8 @@
-@import url('the-new-css-reset');
+/* @import url('the-new-css-reset'); */
 @import url('lightgallery/css/lightgallery.css');
 @import url('lightgallery/css/lg-zoom.css');
 @import url('lightgallery/css/lg-thumbnail.css');
+
+.gallery__item {
+    border-radius: 5px;
+}

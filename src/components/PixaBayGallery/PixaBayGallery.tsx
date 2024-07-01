@@ -14,17 +14,27 @@ const PixaBayGallery: FC<PixaBayGalleryProps> = () => {
    //    alert('Welcome to lightGallery')
    // }
 
+   const img_links = ['./img/bmw_x3_2017.jpg', './img/car_come_soon.jpg', './img/car_icon.jpg', './img/error404.jpg', './img/load.png']
+
    return (
       <>
          <PixaBayGalleryWrapper>
-            <h2>PixaBay lightGallery Component</h2>
+            <h3>PixaBay lightGallery Component</h3>
             <Lightgallery
                // onInit={onInit}
-               speed={500}
                plugins={[lgZoom, lgThumbnail]}
+               speed={500}
+               mode='lg-fade'
+               galleryId='pixabay'
+               elementClassNames='gallery'
             >
-               <a href={require('./img/bmw_x3_2017.jpg')}>
-                  <img src={require('./img/bmw_x3_2017.jpg')} alt='bmw_x3_2017'></img>
+               <a 
+                  data-lg-size = '500-500'
+                  data-src = {require('./img/bmw_x3_2017.jpg')}
+                  data-sub-html = '<h3>Hello world!</h3>'
+               >
+                  <img 
+                     src={require('./img/bmw_x3_2017.jpg')} alt='bmw_x3_2017'></img>
                </a>
                <a href={require('./img/car_come_soon.jpg')}>
                   <img src={require('./img/car_come_soon.jpg')} alt='car_come_soon'></img>
