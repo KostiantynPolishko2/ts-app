@@ -20,11 +20,16 @@ const MenuWrapper = styled(Display)`
     width: 95%;
 `;
 
+export const Btn = styled.button.attrs({
+    type: "button",
+    formTarget: "_blank",
+})``;
+
 export const BtnLink = styled(Link)<IBtnProps>`
     padding: 0px 5px;
     border-radius: 5px;
-    background-color: ${props => props._bgColor || 'lightgrey'};
-    color: ${props => props._color || 'black'};
+    background-color: ${props => props._bgColor || 'black'};
+    color: ${props => props._color || 'white'};
 `;
 
 export default MenuWrapper;
