@@ -1,20 +1,27 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect} from 'react';
 import './PixaBayGallery.css';
 import { PixaBayGalleryWrapper } from './PixaBayGallery.styled';
 
 import Lightgallery from 'lightgallery/react';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
+// import fjGallery from 'flickr-justified-gallery';
 
 interface PixaBayGalleryProps {}
 
+interface ImgData {
+
+}
+
 const PixaBayGallery: FC<PixaBayGalleryProps> = () => {
 
-   // const onInit = () => {
-   //    alert('Welcome to lightGallery')
-   // }
-
-   const img_links = ['./img/bmw_x3_2017.jpg', './img/car_come_soon.jpg', './img/car_icon.jpg', './img/error404.jpg', './img/load.png']
+   const img_links = [
+      { src: './img/bmw_x3_2017.jpg', alt: 'bmw_x3_2017.jpg'}, 
+      { src: './img/car_come_soon.jpg', alt: 'car_come_soon.jpg'}, 
+      { src: './img/car_icon.jpg', alt: 'car_icon.jpg'}, 
+      { src: './img/error404.jpg', alt: 'error404.jpg'}, 
+      { src: './img/load.png', alt: 'load.png'}
+   ]
 
    return (
       <>
@@ -28,26 +35,17 @@ const PixaBayGallery: FC<PixaBayGalleryProps> = () => {
                galleryId='pixabay'
                elementClassNames='gallery'
             >
-               <a 
-                  data-lg-size = '500-500'
-                  data-src = {require('./img/bmw_x3_2017.jpg')}
-                  data-sub-html = '<h3>Hello world!</h3>'
-               >
-                  <img 
-                     src={require('./img/bmw_x3_2017.jpg')} alt='bmw_x3_2017'></img>
-               </a>
-               <a href={require('./img/car_come_soon.jpg')}>
-                  <img src={require('./img/car_come_soon.jpg')} alt='car_come_soon'></img>
-               </a>
-               <a href={require('./img/car_icon.jpg')}>
-                  <img src={require('./img/car_icon.jpg')} alt='car_icon'></img>
-               </a>
-               <a href={require('./img/error404.jpg')}>
-                  <img src={require('./img/error404.jpg')} alt='error404'></img>
-               </a>
-               <a href={require('./img/load.png')}>
-                  <img src={require('./img/load.png')} alt='load'></img>
-               </a>
+               {
+                  img_links.map((img, index) => (
+                     <a 
+                        data-lg-size = '500-500'
+                        data-src = {require(`${img.src}`)}
+                        data-sub-html = '<h3>PixaBay thumbnail</h3>'
+                     >
+                     <img src={require(`${img.src}`)} alt={img.alt}></img>
+                  </a>
+                  ))
+               }
             </Lightgallery>
          </PixaBayGalleryWrapper>
       </>
