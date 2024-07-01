@@ -1,5 +1,6 @@
 import React, { FC, useEffect} from 'react';
 import './PixaBayGallery.css';
+import { IPixaBayProps } from './IPixaBay';
 import { PixaBayGalleryWrapper, Thumbnail } from './PixaBayGallery.styled';
 
 import Lightgallery from 'lightgallery/react';
@@ -7,16 +8,7 @@ import lgZoom from 'lightgallery/plugins/zoom';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 // import fjGallery from 'flickr-justified-gallery';
 
-interface ImgDate {
-   src: string,
-   alt: string,
-}
-
-interface PixaBayGalleryProps {
-   imgLinks: ImgDate[]
-}
-
-const PixaBayGallery: FC<PixaBayGalleryProps> = (props) => {
+const PixaBayGallery: FC<IPixaBayProps> = (props) => {
 
    return (
       <>
@@ -29,14 +21,14 @@ const PixaBayGallery: FC<PixaBayGalleryProps> = (props) => {
                elementClassNames='gallery'
             >
                {
-                  props.imgLinks.map((img, index) => (
-                        <a 
+                  props.hits.map((img, index) => (
+                        <a
                            data-lg-size = '500-500'
                            key={index}
-                           data-src={require(`${img.src}`)}
+                           data-src={img.previewURL}
                            data-sub-html='<h3>PixaBay thumbnail</h3>'
                         >
-                           <Thumbnail src={require(`${img.src}`)} alt={img.alt}/>
+                           <Thumbnail src={img.previewURL} alt={img.user}/>
                         </a>
                   ))
                }
