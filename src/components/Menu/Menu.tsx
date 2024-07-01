@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import MenuWrapper from './Menu.styled';
+import MenuWrapper, { BtnLink } from './Menu.styled';
 import { INavProps } from './IMenu';
 import { Link } from 'react-router-dom';
 
@@ -11,9 +11,9 @@ const Menu: FC<MenuProps> = (props) => {
  
    return (
       <MenuWrapper>
-         <Link to={props.home} style={{color: 'white'}}>Home btn</Link>
-         <Link to={props.about} style={{color: 'red'}}>About btn</Link>
-         <Link to={props.contact} style={{color: 'blue'}}>Contact btn</Link>      
+         <BtnLink to={props.home} _bgColor='grey' _color='white'>Home btn</BtnLink>
+         <BtnLink to={props.about} _bgColor='green' _color='red'>About btn</BtnLink>
+         <BtnLink to={props.contact} _bgColor='gold' _color='blue'>Contact btn</BtnLink>      
       </MenuWrapper>
    );
 }

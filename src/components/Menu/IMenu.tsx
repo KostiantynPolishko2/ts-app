@@ -4,4 +4,4 @@ export interface INavProps {
     home: string,
     about: string,
     contact: string,
- }
+}

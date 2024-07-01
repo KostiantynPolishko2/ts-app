@@ -1,11 +1,11 @@
 import React, { FC, ReactElement } from 'react';
-import { Link } from 'react-router-dom'
+import { DisplayBox } from './Sections.style';
 
 const About: FC = (): ReactElement => {
     return(
-        <div>
-            About page
-        </div>
+        <DisplayBox _bgColor='lightgreen' _color='red'>
+            <p>About page</p>
+        </DisplayBox>
     );
 }
 
