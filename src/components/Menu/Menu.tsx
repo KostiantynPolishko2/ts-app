@@ -1,20 +1,19 @@
 import React, { FC } from 'react';
-import { MenuWrapper, Navigation } from './Menu.styled';
+import MenuWrapper from './Menu.styled';
+import { INavProps } from './IMenu';
 import { Link } from 'react-router-dom';
-import Section from './Sections/Sections';
 
-interface MenuProps {}
+interface MenuProps extends INavProps{
 
-const Menu: FC<MenuProps> = () => {
+}
+
+const Menu: FC<MenuProps> = (props) => {
  
    return (
       <MenuWrapper>
-         <Navigation>
-            <Link to={'/home'} style={{color: 'white'}}>Home btn</Link>
-            <Link to={'/about'} style={{color: 'red'}}>About btn</Link>
-            <Link to={'/contact'} style={{color: 'blue'}}>Contact btn</Link>
-         </Navigation>
-         <Section home='/home' about='/about' contact='/contact'/>
+         <Link to={props.home} style={{color: 'white'}}>Home btn</Link>
+         <Link to={props.about} style={{color: 'red'}}>About btn</Link>
+         <Link to={props.contact} style={{color: 'blue'}}>Contact btn</Link>      
       </MenuWrapper>
    );
 }

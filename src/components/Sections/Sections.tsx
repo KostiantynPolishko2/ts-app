@@ -1,14 +1,13 @@
 import React, { FC } from 'react';
 import { SectionWrapper } from './Sections.style';
+import { INavProps } from '../Menu/IMenu';
 import Home from './Home';
 import About from './About';
 import Contact from './Contact';
 import { Route, Routes } from 'react-router-dom';
 
-interface SectionProps {
-    home: string,
-    about: string,
-    contact: string,
+interface SectionProps extends INavProps {
+
 }
 
 const Section: FC<SectionProps> = (props) => {

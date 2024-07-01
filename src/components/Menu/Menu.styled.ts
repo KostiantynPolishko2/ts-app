@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 
-export const MenuWrapper = styled.div`
-`;
-
 const Display = styled.div`
     display: flex;
     flex-direction: row;
@@ -10,9 +7,11 @@ const Display = styled.div`
     align-items: center;
 `;
 
-export const Navigation = styled(Display)`
+const MenuWrapper = styled(Display)`
     background-color: lightgreen;
     margin: 5px auto;
     padding: 5px;
     width: 95%;
 `;
+
+export default MenuWrapper;

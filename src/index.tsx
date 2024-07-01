@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import FormMenu from './components/Menu/Menu';
-import Menu from './components/Menu/Menu'
+import 'the-new-css-reset';
+import Menu from './components/Menu/Menu';
+import Section from './components/Sections/Sections';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 
@@ -12,7 +13,8 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
       <BrowserRouter>
-          <Menu/>
+          <Menu home='/home' about='/about' contact='/contact'/>
+          <Section home='/home' about='/about' contact='/contact'/>
       </BrowserRouter>
   </React.StrictMode>
 );
