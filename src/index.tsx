@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import FormMenu from './components/Menu/Menu';
+import Menu from './components/Menu/Menu'
 import reportWebVitals from './reportWebVitals';
-import Menu from './components/Menu/Menu';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Menu/>
+      <BrowserRouter>
+          <Menu/>
+      </BrowserRouter>
   </React.StrictMode>
 );
 
