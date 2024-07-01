@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './components/App/App';
-import PixaBayGallery from './components/PixaBayGallery/PixaBayGallery';
+import FormGallery from './components/PixaBayGallery/FormGallery';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
@@ -10,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <PixaBayGallery/>
+    <FormGallery/>
   </React.StrictMode>
 );
 

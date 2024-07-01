@@ -7,26 +7,20 @@ import lgZoom from 'lightgallery/plugins/zoom';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 // import fjGallery from 'flickr-justified-gallery';
 
-interface PixaBayGalleryProps {}
-
-interface ImgData {
-
+interface ImgDate {
+   src: string,
+   alt: string,
 }
 
-const PixaBayGallery: FC<PixaBayGalleryProps> = () => {
+interface PixaBayGalleryProps {
+   imgLinks: ImgDate[]
+}
 
-   const img_links = [
-      { src: './img/bmw_x3_2017.jpg', alt: 'bmw_x3_2017.jpg'}, 
-      { src: './img/car_come_soon.jpg', alt: 'car_come_soon.jpg'}, 
-      { src: './img/car_icon.jpg', alt: 'car_icon.jpg'}, 
-      { src: './img/error404.jpg', alt: 'error404.jpg'}, 
-      { src: './img/load.png', alt: 'load.png'}
-   ]
+const PixaBayGallery: FC<PixaBayGalleryProps> = (props) => {
 
    return (
       <>
          <PixaBayGalleryWrapper>
-            <h3>PixaBay lightGallery Component</h3>
             <Lightgallery
                plugins={[lgZoom, lgThumbnail]}
                speed={500}
@@ -35,7 +29,7 @@ const PixaBayGallery: FC<PixaBayGalleryProps> = () => {
                elementClassNames='gallery'
             >
                {
-                  img_links.map((img, index) => (
+                  props.imgLinks.map((img, index) => (
                         <a 
                            data-lg-size = '500-500'
                            key={index}
