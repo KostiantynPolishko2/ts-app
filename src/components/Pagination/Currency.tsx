@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
-import { NavigationWrapper } from  './Navigation.styled';
-import './Navigation.css';
+import { PaginationWrapper } from  './Pagination.styled';
+import './Pagination.css';
 
 export type CurrencyProps = {
     rateBuy?: number | string,
@@ -14,12 +14,12 @@ export type ItemCurrency = {
 }
 
 export const Currency: FC<ItemCurrency> = (props) => (
-    <NavigationWrapper className='card-currency'>
+    <PaginationWrapper className='card-currency'>
         <h2>Item&emsp;{props?._index || 0}</h2>
         <p style={{backgroundColor: 'red'}}>sell:&emsp;{props._item?.RateSell || 'none'}</p>
         <p style={{backgroundColor: 'green'}}>buy:&emsp;{props._item?.rateBuy || 'none'}</p>
         <p style={{backgroundColor: 'gray'}}>kind:&emsp;{props._item?.currencySymbol || 'none'}</p>
-    </NavigationWrapper>
+    </PaginationWrapper>
 )
 
 export const currencies: Array<CurrencyProps | null> = [

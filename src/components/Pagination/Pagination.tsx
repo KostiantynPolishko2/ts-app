@@ -5,7 +5,7 @@ import Pagimagic from 'react-pagimagic'
 import { currencies, CurrencyProps, ItemCurrency } from './Currency';
 import { Forward } from './Arrow';
 
-interface NavigationProps {}
+interface PaginationProps {}
 
 const currencyPagination = (arr: Array<CurrencyProps>) => (
    arr.map((item, index) => (
@@ -13,7 +13,7 @@ const currencyPagination = (arr: Array<CurrencyProps>) => (
    ))
 )
 
-const Navigation: FC<NavigationProps> = () => {
+const Pagination: FC<PaginationProps> = () => {
 
    return (
       <div style={{margin: 5+'px'}}>
@@ -36,4 +36,4 @@ const Navigation: FC<NavigationProps> = () => {
    );
 }
 
-export default Navigation;
+export default Pagination;

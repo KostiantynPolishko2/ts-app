@@ -7,7 +7,7 @@ export const Display = styled.div`
     align-items: center;
 `;
 
-export const NavigationWrapper = styled.div`
+export const PaginationWrapper = styled.div`
     width: fit-content;
     margin: 5px;
     padding: 2px 5px;
