@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Navigation from './components/Navigation/Navigation';
+import Navigation from './components/Pagination/Navigation';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
