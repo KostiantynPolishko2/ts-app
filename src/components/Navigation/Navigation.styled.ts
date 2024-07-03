@@ -12,8 +12,9 @@ export const NavigationWrapper = styled.div`
     margin: 5px;
     padding: 2px 5px;
     border: 1px solid black;
-    background-color: yellow;
+    background-color: gray;
     & > p {
-        color: blue;
+        color: white;
+        font-size: 600;
     }
 `;
