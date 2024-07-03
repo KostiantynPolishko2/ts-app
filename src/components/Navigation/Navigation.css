@@ -1,0 +1,94 @@
+:root {
+    --height-block: 200px;
+    --width-block: 350px
+}
+
+div.Pagimagic.full-view {
+    background-color: aqua;
+    padding: 5px;
+    min-width: calc(var(--width-block)*0.75);
+    min-height: var(--height-block);
+    height: fit-content;
+}
+
+.my-arrow {
+    width: var(--width-block);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.my-arrow > p {
+    width: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.card-currency {
+    border-radius: 5px;
+    display: inline-block;
+    justify-content: center;
+}
+
+.Pagimagic .card-currency {
+    background-color: yellow;
+}
+
+.Pagimagic__nav-item {
+    background-color: blueviolet;
+}
+
+.Pagimagic__nav-item--prev {
+    background-color: rgb(190, 73, 135);
+    color: white;
+}
+
+.Pagimagic__nav-item--next {
+    background-color: rgb(55, 231, 20);
+    color: wheat;
+}
+
+.full-view__counter {
+    background-color: red;
+    width: fit-content;
+    margin: 5px auto;
+    padding: 2px 5px;
+}
+
+.full-view__nav-item--next {
+    cursor: crosshair;
+    border: 1px solid black;
+}
+
+.full-view__nav-item--next:hover {
+    box-shadow: 3px 3px 2px gray;
+}
+
+a.full-view__nav-item:hover {
+    box-shadow: 3px 3px 2px rgb(255, 30, 0);
+}
+
+span.full-view__break:hover {
+    box-shadow: 3px 3px 2px rgb(0, 255, 85);
+}
+
+nav.full-view__nav {
+    position: relative;
+    margin-top: calc(var(--height-block)*0.35);
+}
+
+.full-view__nav {
+    background-color: rgb(99, 133, 139);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
