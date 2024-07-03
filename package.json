@@ -13,7 +13,7 @@
     "node-modules": "^1.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-pagimagic": "^2.0.0",
+    "react-router": "^6.24.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.11",
     "the-new-css-reset": "^1.11.2",
@@ -43,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-pagimagic": "^2.0.0"
   }
 }
